@@ -15,7 +15,7 @@ class CarSerializer(serializers.Serializer):
     )
 
     def validate_horse_powers(self, value):
-        if not 1<= value <= 1914:
+        if not 1 <= value <= 1914:
             raise serializers.ValidationError(
                 "Horse powers should be in 1-1914 gap."
             )
