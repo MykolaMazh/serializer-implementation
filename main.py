@@ -19,14 +19,3 @@ def deserialize_car_object(json: bytes) -> Car:
     serializer.is_valid(raise_exception=True)
     instance = serializer.save()
     return instance
-
-
-car = Car.objects.create(
-    manufacturer="manufacturer1",
-    model="model",
-    horse_powers=100,
-    is_broken=False
-)
-json = serialize_car_object(car)
-print(json)
-print(deserialize_car_object(json))
